@@ -9,7 +9,7 @@ pragma solidity ^0.8.13;
   - cannot declare a constructor
   - cannot declare state variables
 */
-
+// ICounter의 increment() 함수 사용
 contract Counter {
     uint public count;
 
@@ -23,7 +23,7 @@ interface ICounter {
 
     function increment() external;
 }
-
+// 코드 없이 이미 배포된 컨트랙트(Counter)를 interface를 사용하여 호출할 수 있음.
 contract MyContract {
     function incrementCounter(address _counter) external {
         ICounter(_counter).increment();
